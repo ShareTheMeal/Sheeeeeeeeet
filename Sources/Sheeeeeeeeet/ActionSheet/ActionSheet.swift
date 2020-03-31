@@ -283,7 +283,6 @@ open class ActionSheet: UIViewController {
     // MARK: - Protected Functions
     
     open func handleTap(on item: MenuItem) {
-        reloadData()
         if item.tapBehavior != .dismiss { return selectAction(self, item) }
         self.dismiss { self.selectAction(self, item) }
     }
